@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Abdul Muntaqim | Senior QA Automation Engineer Portfolio
 
-## Getting Started
+A premium, responsive portfolio website for Abdul Muntaqim, showcasing automation engineering depth, quality systems, CI/CD workflows, API and UI automation, and release confidence.
 
-First, run the development server:
+## Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Playwright (for automated portfolio smoke tests)
+
+## Features
+
+- Premium dark engineering brand aesthetic
+- Responsive layout across desktop and mobile
+- Story-driven portfolio sections with clear professional narrative
+- Experience timeline reflecting factual CV details
+- Case studies based on actual provided experience
+- Automation architecture and CI/CD visual storytelling
+- Downloadable resume placeholder at /public/resume/Abdul-Muntaqim-Resume.pdf
+- SEO metadata and social preview configuration
+- Accessibility-conscious UI patterns and focus states
+- Playwright smoke suite covering page load, navigation, and key sections
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Testing
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx playwright test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project supports static export through Next.js. It is ready for deployment to platforms such as Vercel or GitHub Pages with the existing export configuration.
 
-## Deploy on Vercel
+For a Vercel deployment:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push the project to a GitHub repository.
+2. Import the repository in Vercel.
+3. Use the default Next.js build settings.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Content updates
+
+Portfolio content is stored in the data folder:
+
+- data/profile.ts
+- data/experience.ts
+- data/projects.ts
+- data/skills.ts
+- data/certifications.ts
+
+Update these files when personal details, experience, or project content needs to be refreshed.
+
+## Resume placeholder
+
+A placeholder resume file exists at:
+
+/public/resume/Abdul-Muntaqim-Resume.pdf
+
+Replace it with the real PDF when available.
+
+## QA notes
+
+The portfolio includes automated smoke tests that confirm the homepage loads and the main sections render correctly. The visual and content direction aims to communicate Abdul's engineering credibility without inventing unsupported claims.

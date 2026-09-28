@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050816;
-  --foreground: #f8fafc;
+  --background: #06070b;
+  --foreground: #eef6ff;
+  --panel: rgba(11, 13, 18, 0.8);
+  --panel-strong: rgba(14, 17, 24, 0.95);
+  --line: rgba(148, 163, 184, 0.14);
+  --cyan: #67e8f9;
+  --cyan-strong: #22d3ee;
+  --slate-900: #0f172a;
 }
 
 @theme inline {
@@ -18,9 +24,9 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(34, 211, 238, 0.14), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.12), transparent 28%),
-    var(--background);
+    radial-gradient(circle at top, rgba(34, 211, 238, 0.09), transparent 16%),
+    radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.08), transparent 20%),
+    #06070b;
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   min-height: 100vh;
@@ -32,7 +38,7 @@ body {
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.28);
+  background: rgba(103, 232, 249, 0.24);
   color: white;
 }
 
@@ -49,4 +55,73 @@ a {
 
 section {
   position: relative;
+}
+
+.bg-cyber-grid {
+  background-image:
+    linear-gradient(rgba(103, 232, 249, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103, 232, 249, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(255, 255, 255, 0.03)
+  );
+  background-size: 100% 5px;
+  opacity: 0.22;
+}
+
+.hud-card {
+  background: rgba(11, 13, 18, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 18px 60px rgba(2, 6, 23, 0.45);
+}
+
+.pipeline-node {
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(15, 23, 42, 0.75);
+}
+
+.code-block {
+  font-family: var(--font-geist-mono), "SFMono-Regular", Consolas, monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06070b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.45);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(103, 232, 249, 0.7);
 }
